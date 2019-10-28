@@ -1,0 +1,6 @@
+D:\C#\LearningCsharp\LearningCsharp\bin\Debug\LearningCsharp.exe.config
+D:\C#\LearningCsharp\LearningCsharp\bin\Debug\LearningCsharp.exe
+D:\C#\LearningCsharp\LearningCsharp\bin\Debug\LearningCsharp.pdb
+D:\C#\LearningCsharp\LearningCsharp\obj\Debug\LearningCsharp.exe
+D:\C#\LearningCsharp\LearningCsharp\obj\Debug\LearningCsharp.pdb
+D:\C#\LearningCsharp\LearningCsharp\obj\Debug\LearningCsharp.csprojAssemblyReference.cache
