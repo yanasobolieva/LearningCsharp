@@ -1,29 +1,69 @@
-﻿using LearningCsharp.Lesson1;
-using System;
+﻿using System;
 
-namespace LearningCsharp
+namespace LearningCsharp.Lesson1
 {
     class Program
     {
-    
         static void Main(string[] args)
         {
-            // Uncomment the next 2 lines to run first task code
-            // SpeedCounter speedCounter = new SpeedCounter();
-            // speedCounter.Count();
+            CheckIfDigitIsEven();
+            CalculateDistance();
+            CalculateResistance();
+            FindMaxValue();
+            Console.ReadKey();
+        }
 
-            // Uncomment the next 2 lines to run second task code
-            // ResistanceCounter resistanceCounter = new ResistanceCounter(2, 4, 8);
-            // Console.Write($"The resistance R0 value is '{resistanceCounter.CountResistance0()}' \n");
+        static void CheckIfDigitIsEven()
+        {
+            Console.WriteLine("Please, enter some digit and press Enter:");
+            int someDigit = Convert.ToInt32(Console.ReadLine());
+            EvenCheck evenCheck = new EvenCheck();
+            if (evenCheck.IsEven(someDigit))
+            {
+                Console.WriteLine("You have entered an even digit!");
+            }
+            else
+            {
+                Console.WriteLine("You have entered an odd digit!");
+            }
+        }
 
-            // Uncomment the next 2 lines to run third task code
-            // EvenCheck evenCheck = new EvenCheck();
-            // evenCheck.Check();
+        static void CalculateDistance()
+        {
+            Console.WriteLine("Please, enter the distance to the airport in kilometers and press Enter:");
+            double distance = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please, enter the time in hours and press Enter:");
+            double time = Convert.ToDouble(Console.ReadLine());
+            SpeedCounter speedCounter = new SpeedCounter();
+            double speed = speedCounter.CountDriverSpeed(distance, time);
+            Console.WriteLine($"You need to drive with speed '{speed} km/h'");
+        }
 
-            // Uncomment the next 2 lines to run fourth task code
-            // MaxValueDefiner maxValueDefiner = new MaxValueDefiner();
-            // maxValueDefiner.DefineMaxValue();
+        static void CalculateResistance()
+        {
+            ResistanceCounter resistanceCounter = new ResistanceCounter();
+            Console.WriteLine($"The resistance R0 value is '{resistanceCounter.CountResistance(2, 4, 8)}' \n");
+        }
 
+        static void FindMaxValue()
+        {
+            bool firstInput = true;
+            int maxValue = 0;
+            for (int i = 0; i < 7; i++)
+            {
+                var currentEnteredValue = Convert.ToInt32(Console.ReadLine());
+                if (firstInput)
+                {
+                    maxValue = currentEnteredValue;
+                    firstInput = false;
+                }
+                else if (currentEnteredValue > maxValue)
+                {
+                    maxValue = currentEnteredValue;
+                }
+            }
+
+            Console.WriteLine(maxValue);
         }
     }
 }
