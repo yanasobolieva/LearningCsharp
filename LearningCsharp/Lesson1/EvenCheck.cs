@@ -10,16 +10,16 @@ namespace LearningCsharp.Lesson1
     {
         public void Check()
         {
-            Console.Write("Введите число:");
+            Console.Write("Please, enter some digit and press Enter:");
             int someDigit = Convert.ToInt32(Console.ReadLine());
             if (someDigit % 2 == 0)
             {
-                Console.Write("Введено четное число");
+                Console.Write("You have entered an even digit!");
                 Console.ReadKey();
             }
             else
             {
-                Console.Write("Введено нечетное число");
+                Console.Write("You have entered an odd digit!");
                 Console.ReadKey();
             }
         }

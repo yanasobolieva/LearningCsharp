@@ -6,12 +6,12 @@ namespace LearningCsharp.Lesson1
     {     
         public void Count()
         {
-            Console.Write("Введите расстояние до аэропорта в километрах и нажмите Enter:");
+            Console.Write("Please, enter the distance to the airport in kilometers and press Enter:");
             double distance = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите время за которое нужно добраться до аэропорта в часах и нажмите Enter:");
+            Console.Write("Please, enter the time in hours and press Enter:");
             double time = Convert.ToDouble(Console.ReadLine());
             double speed = CountedDriverSpeed(distance, time);
-            Console.Write($"Вы должны ехать со скоростью {speed} км/ч");
+            Console.Write($"You need to drive with speed '{speed} km/h'");
             Console.ReadKey();
         }
 

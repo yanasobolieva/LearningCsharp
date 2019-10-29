@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lesson1\EvenCheck.cs" />
+    <Compile Include="Lesson1\MaxValueDefiner.cs" />
     <Compile Include="Lesson1\ResistanceCounter.cs" />
     <Compile Include="Lesson1\SpeedCounter.cs" />
     <Compile Include="Program.cs" />
