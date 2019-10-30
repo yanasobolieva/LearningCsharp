@@ -42,9 +42,5 @@ namespace LearningCsharp
             Array.Copy(Marks, 0, arrayWithMarksOnly, 0, StartCount);
             return arrayWithMarksOnly;
         }
-        public int GetMarksQuantity()
-        {
-            return StartCount;
-        }
     }
 }
