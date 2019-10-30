@@ -24,21 +24,23 @@ namespace LearningCsharp
         {
             if (mark >= 1 && mark <= 12)
             {
-                Marks[StartCount] = mark;
-                StartCount++;
-
                 if (Marks.Length == StartCount)
                 {
                     int[] temporaryMarks = new int[(Marks.Length * 2)];
                     Array.Copy(Marks, temporaryMarks, Marks.Length);
                     Marks = temporaryMarks;
                 }
+
+                Marks[StartCount] = mark;
+                StartCount++;                               
             }           
         }
          
         public int[] GetMarks()
         {
-            return Marks;
+            int[] arrayWithMarksOnly = new int[StartCount];
+            Array.Copy(Marks, 0, arrayWithMarksOnly, 0, StartCount);
+            return arrayWithMarksOnly;
         }
         public int GetMarksQuantity()
         {
