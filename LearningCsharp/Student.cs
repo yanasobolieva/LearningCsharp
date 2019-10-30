@@ -26,7 +26,7 @@ namespace LearningCsharp
             {
                 if (Marks.Length == StartCount)
                 {
-                    int[] temporaryMarks = new int[(Marks.Length * 2)];
+                    int[] temporaryMarks = new int[(Marks.Length + 1)];
                     Array.Copy(Marks, temporaryMarks, Marks.Length);
                     Marks = temporaryMarks;
                 }
@@ -38,9 +38,7 @@ namespace LearningCsharp
          
         public int[] GetMarks()
         {
-            int[] arrayWithMarksOnly = new int[StartCount];
-            Array.Copy(Marks, 0, arrayWithMarksOnly, 0, StartCount);
-            return arrayWithMarksOnly;
+            return Marks;
         }
         public int GetMarksQuantity()
         {
