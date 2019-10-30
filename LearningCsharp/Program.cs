@@ -15,14 +15,9 @@ namespace LearningCsharp
             {
                 sum += mark;
             }
-
-            Console.WriteLine(jack.GetMarksQuantity());
-            double avg = sum / (double)jack.GetMarksQuantity();
+            Console.WriteLine(jack.Marks.Count);
+            double avg = sum / (double)jack.Marks.Count;
             Console.WriteLine($"{jack.Name} {jack.Surname} has average mark: {avg}");
-
-            // Console.WriteLine(jack.Marks.Length);
-            // double avg = sum / (double)jack.Marks.Length;
-            // Console.WriteLine($"{jack.Name} {jack.Surname} has average mark: {avg}");
         }
     }
 }    
