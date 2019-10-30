@@ -40,9 +40,5 @@ namespace LearningCsharp
         {
             return Marks;
         }
-        public int GetMarksQuantity()
-        {
-            return StartCount;
-        }
     }
 }
